@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Berline Family Daycare</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+<!-- HEADER -->
+<header class="bg-cyan-50 backdrop-blur-sm sticky top-0 z-40 shadow-sm border-b relative" style="border-bottom: 2px solid #ffb3d9;">
+  <div class="max-w-7xl mx-0 px-4 w8 flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-3">
+      <img src="images/logo.jpg" alt="bfc logo" class="w-10 h-10 rounded-md object-cover">
+
+      <div>
+        <div class="text-lg font-semibold leading-tight">🌸Berline Family Daycare</div>
+        <div class="text-xs text-slate-500 -mt-0.5">Daycare & Early Learning</div>
+      </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav id="desktop-nav" class="hidden md:flex md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2 items-center gap-6 text-sm font-medium text-slate-700">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <div class="md:hidden">
+      <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="p-2 rounded-md bg-white border shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path id="icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile slide-in menu -->
+  <div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50" aria-hidden="true">
+    <div class="flex flex-col px-6 py-6 gap-4 text-slate-700 h-full">
+      <div class="flex items-center justify-end">
+        <button id="mobile-close" class="p-2 rounded-md text-slate-600 hover:bg-slate-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-4 mt-4">
+        <a href="#programs" class="py-2 px-2 rounded hover:bg-slate-50">Programs</a>
+        <a href="gallery.html" class="py-2 px-2 rounded hover:bg-slate-50">Gallery</a>
+        <a href="#contact" class="py-2 px-2 rounded hover:bg-slate-50">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section id="hero" class="hero" style="position:relative;overflow:hidden;height:60vh;">
+  <canvas id="hero-canvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0;"></canvas>
+  <div class="hero-text" style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;padding:28px;text-align:center;">
+    <h1>Welcome to Berline Family Daycare</h1>
+    <p>We’re excited to support your child’s growth in a safe, warm, and nurturing environment.</p>
+    <div style="display:flex;gap:12px;">
+      <a href="enrollment.html" class="btn">Enroll Now</a>
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="folder-wrapper flex justify-end mt-80">
+  <div class="folder relative w-48 h-32 bg-yellow-200 rounded-xl shadow-lg overflow-hidden">
+    <div class="folder-tab absolute top-0 left-6 w-32 h-8 bg-yellow-300 rounded-t-lg transform origin-bottom animate-folder-open-close"></div>
+    <div class="folder-content absolute bottom-4 left-1/2 transform -translate-x-1/2 text-yellow-600 text-4xl opacity-0 animate-icon-appear">⭐</div>
+  </div>
+</div>
+
+
+  <!-- Folder animation (right side) -->
+  <div class="folder-container" aria-hidden="false">
+    <div class="folder" id="hero-folder" role="button" tabindex="0" aria-pressed="false">
+      <div class="folder__back"></div>
+      <div class="paper"></div>
+      <div class="paper"></div>
+      <div class="paper"></div>
+      <div class="folder__front"></div>
+      <div class="right"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about">
+  <h2 class="text-3xl font-bold text-center mb-10">About Us</h2>
+  <p>
+    At Berline Family Daycare, we provide a warm and loving home environment where children can learn,
+    play, and thrive. We focus on building confidence, creativity, and social skills through guided play
+    and early education.
+  </p>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="programs">
+  <h2 class="text-3xl font-bold text-center mb-10">Our Programs</h2>
+  <div class="program-list">
+    <div class="program-card">
+      <h3>Infant Care</h3>
+      <p>Personalized attention and a nurturing environment for babies 6 weeks and up.</p>
+    </div>
+    <div class="program-card">
+      <h3>Toddler Program</h3>
+      <p>Fun learning activities that promote exploration, creativity, and early development.</p>
+    </div>
+    <div class="program-card">
+      <h3>Preschool Prep</h3>
+      <p>Interactive lessons that prepare children for school and lifelong learning.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+  <h2 class="text-3xl font-bold text-center mb-10">Our Space</h2>
+  <div class="gallery-grid">
+    <img src="images/playroom.jpg" alt="Playroom">
+    <img src="images/learning.jpg" alt="Learning area">
+    <img src="images/outdoor.jpg" alt="Outdoor play">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-16 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Contact Us</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="space-y-4">
+        <h3 class="text-2xl font-semibold mb-2">Get in Touch</h3>
+        <p class="text-lg text-pink-600">We’re here to help! Reach out using any method below:</p>
+        <p><strong>Phone:</strong> <a href="tel:7815025875" class="text-sky-600 hover:text-pink-700">(781) 502-5875</a></p>
+        <p><strong>Email:</strong> <a href="mailto:bsouil@yahoo.com" class="text-sky-600 hover:text-pink-700 transition">bsouil@yahoo.com</a></p>
+        <p><strong>Address:</strong> 15 Railroad Street, Fitchburg, MA 01420</p>
+        <div class="w-full h-64 rounded-lg overflow-hidden shadow">
+          <iframe class="w-full h-full" src="https://www.google.com/maps?q=15+Railroad+St,+Fitchburg,+MA+01420&output=embed" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-10">
+        <h3 class="text-3xl font-bold text-pink-600 mb-8 text-center">Send Us a Message</h3>
+        <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <input type="text" name="name" placeholder="Full Name" required class="p-3 border rounded">
+          <input type="email" name="email" placeholder="Email" required class="p-3 border rounded">
+          <textarea name="message" placeholder="Your Message" required class="md:col-span-2 p-3 border rounded"></textarea>
+          <button type="submit" class="md:col-span-2 bg-pink-600 text-white p-3 rounded font-semibold">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="w-full bg-slate-800 text-slate-200 mt-auto">
+  <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-3">
+      <img src="images/LOGO.jpg" alt="BFC" class="w-10 h-10 rounded-full">
+      <div>
+        <div class="font-semibold">Berline Family Daycare</div>
+        <div class="text-sm text-slate-400">Daycare & Early Learning</div>
+      </div>
+    </div>
+    <div class="flex gap-6">
+      <a href="#hero" class="text-slate-300 hover:text-white text-sm">Home</a>
+      <a href="#about" class="text-slate-300 hover:text-white text-sm">About Us</a>
+      <a href="#contact" class="text-slate-300 hover:text-white text-sm">Contact</a>
+      <a href="#programs" class="text-slate-300 hover:text-white text-sm">Programs</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="mailto:bsouil@yahoo.com" class="text-slate-300 hover:text-white text-sm underline">bsouil@yahoo.com</a>
+      <span class="text-slate-400 text-sm">&copy; 2025 Berline Family Daycare</span>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileClose = document.getElementById('mobile-close');
+
+  function openMobileMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    menuBtn?.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMobileMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.remove('translate-x-0');
+    mobileMenu.classList.add('translate-x-full');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    menuBtn?.setAttribute('aria-expanded', 'false');
+  }
+
+  menuBtn?.addEventListener('click', () => {
+    if (mobileMenu?.classList.contains('translate-x-full')) openMobileMenu();
+    else closeMobileMenu();
+  });
+
+  mobileClose?.addEventListener('click', () => closeMobileMenu());
+
+  // Folder toggle
+  const heroFolder = document.getElementById('hero-folder');
+  if (heroFolder) {
+    heroFolder.classList.remove('open');
+    heroFolder.setAttribute('aria-pressed', 'false');
+
+    function toggleFolder(open) {
+      if (open) {
+        heroFolder.classList.add('open');
+        heroFolder.setAttribute('aria-pressed', 'true');
+      } else {
+        heroFolder.classList.remove('open');
+        heroFolder.setAttribute('aria-pressed', 'false');
+      }
+    }
+
+    heroFolder.addEventListener('click', () => toggleFolder(!heroFolder.classList.contains('open')));
+    heroFolder.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleFolder(!heroFolder.classList.contains('open'));
+      }
+    });
+  }
+
+  // Contact form with friendly alert
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xzzqgrkk', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        alert("🎉 Thank you! Your message has been sent.");
+        form.reset();
+      } else {
+        const data = await response.json();
+        const errorMsg = data.errors ? data.errors.map(err => err.message).join(", ") : "Oops! Something went wrong.";
+        alert("⚠️ " + errorMsg);
+      }
+    } catch (error) {
+      alert("⚠️ Oops! Something went wrong.");
+    }
+  });
+</script>
+
+<!-- Hero canvas animation (module import) -->
+<script type="module">
+  import { createSimpleHero } from './hero-ballpit.mjs';
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+
+  const SMALL_QUERY = '(max-width:767px)';
+  const baseCount = 80;
+  let heroInstance = null;
+
+  function startHero() {
+    if (heroInstance) return;
+    const dpr = Math.max(1, Math.min(window.devicePixelRatio || 1, 2));
+    const count = Math.max(30, Math.round(baseCount / dpr));
+    canvas.style.display = 'block';
+    heroInstance = createSimpleHero(canvas, { count });
+  }
+
+  function stopHero() {
+    if (heroInstance && typeof heroInstance.dispose === 'function') {
+      heroInstance.dispose();
+      heroInstance = null;
+    }
+    canvas.style.display = 'none';
+  }
+
+  const mq = window.matchMedia(SMALL_QUERY);
+  if (mq.matches) stopHero();
+  else startHero();
+
+  mq.addEventListener?.('change', (e) => {
+    if (e.matches) stopHero();
+    else startHero();
+  });
+</script>
+
+</body>
+</html>
