@@ -33,40 +33,48 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Mobile menu button -->
-    <div class="md:hidden">
-      <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="p-2 rounded-md bg-white border shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-400">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path id="icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-  </div>
+<!-- Mobile Navigation -->
+<nav class="mobile-nav md:hidden" aria-label="Mobile Menu">
+ <button id="menu-btn" class="hidden p-2 rounded-md bg-white border shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-400" aria-expanded="false" aria-controls="mobile-menu">
+  <span class="sr-only">Toggle menu</span>
+  <!-- SVG icon -->
+</button>
 
-  <!-- Mobile slide-in menu -->
-  <div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50" aria-hidden="true">
-    <div class="flex flex-col px-6 py-6 gap-4 text-slate-700 h-full">
-      <div class="flex items-center justify-end">
-        <button id="mobile-close" class="p-2 rounded-md text-slate-600 hover:bg-slate-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
-      </div>
 
-      <nav class="flex flex-col gap-4 mt-4">
-        <a href="#programs" class="py-2 px-2 rounded hover:bg-slate-50">Programs</a>
-        <a href="gallery.html" class="py-2 px-2 rounded hover:bg-slate-50">Gallery</a>
-        <a href="#contact" class="py-2 px-2 rounded hover:bg-slate-50">Contact</a>
-      </nav>
-    </div>
-  </div>
+  <ul id="mobile-menu" class="hidden flex-col mt-2 space-y-2 bg-white p-4 border rounded shadow-md">
+    <li><a href="#programs" class="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded">Programs</a></li>
+    <li><a href="#gallery" class="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded">Gallery</a></li>
+    <li><a href="#contact" class="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded">Contact</a></li>
+  </ul>
+</nav>
 </header>
 
+
 <!-- HERO SECTION -->
-<section id="hero" class="hero" style="position:relative;overflow:hidden;height:60vh;">
+<section id="hero" class="hero" style="
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    background-image: url('/images/BA.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+">
   <canvas id="hero-canvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0;"></canvas>
-  <div class="hero-text" style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;padding:28px;text-align:center;">
+
+  <!-- Centered Hero Text -->
+  <div class="hero-text" style="
+      position:relative;
+      z-index:2;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      height:100%;
+      gap:12px;
+      padding:28px;
+      text-align:center;
+  ">
     <h1>Welcome to Berline Family Daycare</h1>
     <p>We’re excited to support your child’s growth in a safe, warm, and nurturing environment.</p>
     <div style="display:flex;gap:12px;">
@@ -75,35 +83,13 @@
     </div>
   </div>
 
-  <div class="folder-wrapper flex justify-end mt-80">
-  <div class="folder relative w-48 h-32 bg-yellow-200 rounded-xl shadow-lg overflow-hidden">
-    <div class="folder-tab absolute top-0 left-6 w-32 h-8 bg-yellow-300 rounded-t-lg transform origin-bottom animate-folder-open-close"></div>
-    <div class="folder-content absolute bottom-4 left-1/2 transform -translate-x-1/2 text-yellow-600 text-4xl opacity-0 animate-icon-appear">⭐</div>
-  </div>
-</div>
-
-
-  <!-- Folder animation (right side) -->
-  <div class="folder-container" aria-hidden="false">
-    <div class="folder" id="hero-folder" role="button" tabindex="0" aria-pressed="false">
-      <div class="folder__back"></div>
-      <div class="paper"></div>
-      <div class="paper"></div>
-      <div class="paper"></div>
-      <div class="folder__front"></div>
-      <div class="right"></div>
+  <!-- Right-side folder (optional, does not affect text centering) -->
+  <div class="folder-wrapper" style="position:absolute;bottom:0;right:2rem;">
+    <div class="folder relative w-48 h-32 bg-yellow-200 rounded-xl shadow-lg overflow-hidden">
+      <div class="folder-tab absolute top-0 left-6 w-32 h-8 bg-yellow-300 rounded-t-lg transform origin-bottom animate-folder-open-close"></div>
+      <div class="folder-content absolute bottom-4 left-1/2 transform -translate-x-1/2 text-yellow-600 text-4xl opacity-0 animate-icon-appear">⭐</div>
     </div>
   </div>
-</section>
-
-<!-- ABOUT SECTION -->
-<section id="about" class="about">
-  <h2 class="text-3xl font-bold text-center mb-10">About Us</h2>
-  <p>
-    At Berline Family Daycare, we provide a warm and loving home environment where children can learn,
-    play, and thrive. We focus on building confidence, creativity, and social skills through guided play
-    and early education.
-  </p>
 </section>
 
 <!-- PROGRAMS -->
@@ -124,6 +110,92 @@
     </div>
   </div>
 </section>
+
+<!-- TRUST & TRANSPARENCY -->
+<section id="trust" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">Trust & Transparency</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Licensing -->
+      <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border">
+        <h3 class="text-xl font-semibold mb-3">Licensing & Compliance</h3>
+        <p class="text-sm mb-2">
+          Licensed by the Massachusetts Department of Early Education and Care.
+        </p>
+        <p class="text-sm font-medium">
+          License number available upon request.
+        </p>
+        <a href="https://www.mass.gov/orgs/department-of-early-education-and-care"
+           target="_blank"
+           class="inline-block mt-3 text-sky-600 font-semibold hover:underline text-sm">
+          Verify with MA EEC
+        </a>
+      </div>
+
+      <!-- Safety -->
+      <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border">
+        <h3 class="text-xl font-semibold mb-3">Safety & Staff Qualifications</h3>
+        <ul class="list-disc pl-5 space-y-2 text-sm">
+          <li>State-required background checks for all staff.</li>
+          <li>Current CPR and First Aid certifications.</li>
+          <li>Daily health, safety, and sanitation procedures.</li>
+        </ul>
+      </div>
+
+      <!-- Program -->
+      <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border">
+        <h3 class="text-xl font-semibold mb-3">Daily Program Structure</h3>
+        <ul class="list-disc pl-5 space-y-2 text-sm">
+          <li>Age-appropriate learning activities.</li>
+          <li>Structured routine for meals, naps, and play.</li>
+          <li>Balanced indoor and outdoor time.</li>
+        </ul>
+      </div>
+
+      <!-- Ratios -->
+      <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border">
+        <h3 class="text-xl font-semibold mb-3">Adult-to-Child Ratios</h3>
+        <p class="text-sm">
+          We follow Massachusetts EEC ratio requirements to ensure every child
+          receives proper attention and care.
+        </p>
+      </div>
+
+      <!-- Communication -->
+      <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border">
+        <h3 class="text-xl font-semibold mb-3">Communication With Families</h3>
+        <ul class="list-disc pl-5 space-y-2 text-sm">
+          <li>Daily updates on your child’s activities.</li>
+          <li>Open communication with staff.</li>
+          <li>Fast response to parent questions and concerns.</li>
+        </ul>
+      </div>
+
+      <!-- Tours & References -->
+      <div class="bg-pink-50 p-6 rounded-2xl shadow-sm border-l-4 border-pink-500">
+        <h3 class="text-xl font-semibold mb-3">Tours & Parent References</h3>
+        <p class="mb-4 text-sm">
+          We encourage every family to visit before enrollment.
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-sm mb-4">
+          <li>Schedule an in-person tour.</li>
+          <li>Meet staff and observe daily routines.</li>
+          <li>Parent references available upon request.</li>
+        </ul>
+
+        <a href="#contact"
+           class="inline-block bg-pink-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-pink-700 transition">
+          Book a Tour
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
 <!-- GALLERY -->
 <section id="gallery" class="gallery">
@@ -169,7 +241,7 @@
 <footer class="w-full bg-slate-800 text-slate-200 mt-auto">
   <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
     <div class="flex items-center gap-3">
-      <img src="images/logo.jpg" alt="BFC" class="w-10 h-10 rounded-full">
+      <img src="images/LOGO.jpg" alt="BFC" class="w-10 h-10 rounded-full">
       <div>
         <div class="font-semibold">Berline Family Daycare</div>
         <div class="text-sm text-slate-400">Daycare & Early Learning</div>
@@ -309,4 +381,3 @@
 
 </body>
 </html>
-
