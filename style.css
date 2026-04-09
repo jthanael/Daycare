@@ -232,7 +232,7 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('images/BA.jpg') center/cover no-repeat;
+  background: url('images/ba.jpg') center/cover no-repeat;
   overflow: hidden;
 }
 
