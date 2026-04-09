@@ -1,188 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enrollment Information - Berline Family Daycare</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background: #fff;
-            color: #333;
-        }
-
-        header, footer {
-            background-color: #ffe6f0;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header .logo {
-            font-size: 1.5em;
-            font-weight: 600;
-        }
-
-        header nav a {
-            margin: 0 12px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
-
-        header nav a.active {
-            color: #ff4d94;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 25px auto;
-            padding: 0 15px;
-        }
-
-        h2 {
-            color: #ff69b4;
-            margin-bottom: 10px;
-        }
-
-        details {
-            margin: 20px 0;
-            border: 1px solid #e7c7d6;
-            border-radius: 10px;
-            padding: 12px 18px;
-            background-color: #faf6f8;
-        }
-
-        summary {
-            font-weight: 600;
-            font-size: 1.1em;
-            cursor: pointer;
-        }
-
-        .optional-text ul {
-            margin-top: 12px;
-            padding-left: 20px;
-        }
-
-        .optional-content {
-            margin-top: 12px;
-        }
-
-        /* Professional notice style */
-        .notice {
-            background-color: #fff5fa;
-            color: #b72863;
-            border: 1px solid #ffd2e4;
-            padding: 18px;
-            border-radius: 8px;
-            font-size: 0.95em;
-            margin: 25px 0;
-            text-align: center;
-        }
-
-        /* Required section styling */
-        .required-section {
-            border: 1px solid #ffcce0;
-            border-radius: 10px;
-            padding: 18px;
-            background-color: #ffeaf2;
-            margin-top: 25px;
-        }
-
-        .required-section h3 {
-            margin-top: 0;
-            color: #cc2c7a;
-        }
-
-        .required-section ul {
-            padding-left: 20px;
-            margin-top: 10px;
-        }
-
-        footer {
-            margin-top: 40px;
-        }
-
-        footer h2 {
-            color: #c71585;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enroll your child at Berline Family Daycare in Fitchburg, MA. Learn the steps, what to bring, and contact us to get started.">
+  <link rel="stylesheet" href="style.css">
+  <title>Enrollment | Berline Family Daycare</title>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">🌸 Berline Family Daycare</div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="enrollment-details.html" class="active">Enrollment</a>
-        <a href="#contact">Contact</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+
+        <a href="index.html" class="header-logo" aria-label="Berline Family Daycare — Home">
+          <img src="images/LOGO.jpg" alt="" width="44" height="44" aria-hidden="true">
+          <div class="logo-text">
+            <span class="logo-name">🌸 Berline Family Daycare</span>
+            <span class="logo-sub">Licensed Childcare &amp; Early Learning</span>
+          </div>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#programs">Programs</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="index.html#contact" class="nav-cta">Book a Tour</a>
+        </nav>
+
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="Toggle navigation menu"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6"  x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#programs">Programs</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#contact" class="mobile-cta">📅 Book a Tour</a>
     </nav>
-</header>
+  </header>
 
-<main>
-    <section class="enrollment-info">
-        <h2>Enrollment Information</h2>
-        <p>Welcome to Berline Family Daycare! We’re excited to support your child’s growth in a safe, warm, and nurturing environment. Below you will find all the information needed to begin the enrollment process.</p>
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN
+  ═══════════════════════════════════════════════════════ -->
+  <main id="main-content">
 
-        <div class="notice">
-            The online enrollment form is not available online .  
-            Please contact us directly for enrollment requests or to schedule a visit.
+    <!-- Page Hero -->
+    <div class="enrollment-hero">
+      <div class="container">
+        <h1>Enrollment at Berline Family Daycare</h1>
+        <p>We make the process simple. Here's everything you need to know to get your child started.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container" style="max-width:860px;">
+
+        <!-- IMPROVEMENT: Replaced weak "form not available" notice with
+             a clear, warm explanation and strong CTA to contact directly -->
+        <div class="notice-box" role="note" aria-label="Enrollment notice">
+          <div class="notice-box-icon" aria-hidden="true">💬</div>
+          <p>
+            Enrollment is handled personally — we believe your first conversation should be with a real person, not a form.
+            <strong>Call or message us to check availability and schedule your family's visit.</strong>
+            We'll walk you through everything from there.
+          </p>
         </div>
 
-        <details>
-            <summary>Steps to Enroll Your Child</summary>
-            <div class="optional-content">
-                <div class="optional-text">
-                    <ul>
-                        <li>Prepare your child's basic information (name, age, gender).</li>
-                        <li>Provide Parent/Guardian and Emergency Contact details.</li>
-                        <li>Schedule a visit or meet-and-greet before your child’s first day.</li>
-                        <li>Submit required documentation during your visit.</li>
-                    </ul>
-                </div>
+        <!-- ── Step-by-step process ─────────────────────── -->
+        <section aria-labelledby="steps-heading">
+          <div class="section-header" style="margin-bottom:2rem;">
+            <span class="section-eyebrow">Getting Started</span>
+            <h2 id="steps-heading">How Enrollment Works</h2>
+            <p>Simple, personal, and designed around your family.</p>
+          </div>
+
+          <div class="steps-grid">
+
+            <div class="step-card">
+              <h3>Reach Out</h3>
+              <p>Call or send us a message to introduce yourself and ask about availability for your child's age group.</p>
             </div>
-        </details>
 
-        <div class="required-section">
-            <h3>Parent/Guardian Information (Required)</h3>
-            <p>This information is required to ensure smooth communication and safety for your child.</p>
+            <div class="step-card">
+              <h3>Schedule a Tour</h3>
+              <p>Visit in person to see the space, meet the staff, and get a feel for the daily routine. Bring your questions!</p>
+            </div>
 
-            <ul>
-                <li>Parent/Guardian full name</li>
-                <li>Phone number</li>
-                <li>Email address</li>
-                <li>Emergency contact name, number, and relationship</li>
-                <li>Authorized pickup individuals</li>
+            <div class="step-card">
+              <h3>Submit Paperwork</h3>
+              <p>We'll provide all required forms during your visit. You'll complete them at your own pace, in person.</p>
+            </div>
+
+            <div class="step-card">
+              <h3>Welcome Your Child</h3>
+              <p>Once everything is in order, we'll confirm your start date and prepare a warm welcome for your little one.</p>
+            </div>
+
+          </div><!-- /.steps-grid -->
+        </section>
+
+        <!-- ── Required Information ────────────────────── -->
+        <section class="section" style="padding-top:2.5rem;padding-bottom:0;" aria-labelledby="required-heading">
+          <h2 id="required-heading" style="font-family:var(--font-head);font-weight:800;font-size:1.5rem;color:var(--slate-900);margin-bottom:1rem;">
+            What We'll Need From You
+          </h2>
+          <p style="color:var(--slate-500);margin-bottom:1.5rem;font-size:.95rem;">
+            This information is required to ensure smooth communication and the safest possible care for your child.
+          </p>
+
+          <div class="required-info-card" role="region" aria-label="Required information">
+            <h3>Parent &amp; Guardian Information</h3>
+            <ul aria-label="Required details">
+              <li>Parent/Guardian full name</li>
+              <li>Phone number (primary &amp; alternate)</li>
+              <li>Email address</li>
+              <li>Home address</li>
+              <li>Emergency contact name, number &amp; relationship</li>
+              <li>Authorized pickup individuals</li>
+              <li>Child's date of birth and any medical needs</li>
+              <li>Immunization records (required by MA EEC)</li>
             </ul>
+          </div>
+        </section>
+
+        <!-- ── First Day Checklist ─────────────────────── -->
+        <section class="section" style="padding-top:2.5rem;padding-bottom:0;" aria-labelledby="firstday-heading">
+          <h2 id="firstday-heading" style="font-family:var(--font-head);font-weight:800;font-size:1.5rem;color:var(--slate-900);margin-bottom:1rem;">
+            What to Bring on Your Child's First Day
+          </h2>
+
+          <div style="background:#fff;border:1px solid var(--slate-200);border-radius:var(--radius-md);padding:1.75rem;">
+            <ul style="list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem;">
+              <li style="display:flex;align-items:flex-start;gap:.6rem;font-size:.925rem;color:var(--slate-700);">
+                <span style="color:var(--pink);font-weight:800;flex-shrink:0;">✓</span>
+                Comfortable clothing and one extra set
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:.6rem;font-size:.925rem;color:var(--slate-700);">
+                <span style="color:var(--pink);font-weight:800;flex-shrink:0;">✓</span>
+                Favorite blanket or comfort item (optional)
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:.6rem;font-size:.925rem;color:var(--slate-700);">
+                <span style="color:var(--pink);font-weight:800;flex-shrink:0;">✓</span>
+                Lunch and snacks (if applicable)
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:.6rem;font-size:.925rem;color:var(--slate-700);">
+                <span style="color:var(--pink);font-weight:800;flex-shrink:0;">✓</span>
+                Diapers and wipes (for infants &amp; toddlers)
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:.6rem;font-size:.925rem;color:var(--slate-700);">
+                <span style="color:var(--pink);font-weight:800;flex-shrink:0;">✓</span>
+                Any remaining forms given during your tour
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:.6rem;font-size:.925rem;color:var(--slate-700);">
+                <span style="color:var(--pink);font-weight:800;flex-shrink:0;">✓</span>
+                Any medications with written instructions
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ── CTA block ───────────────────────────────── -->
+        <!-- IMPROVEMENT: Strong dual CTA replacing dead-end "form unavailable" message -->
+        <div style="background:var(--pink);border-radius:var(--radius-lg);padding:2.5rem 2rem;text-align:center;margin-top:3rem;color:#fff;">
+          <h2 style="font-family:var(--font-head);font-weight:800;font-size:1.75rem;margin-bottom:.75rem;color:#fff;">
+            Ready to Get Started?
+          </h2>
+          <p style="opacity:.9;margin-bottom:2rem;font-size:1.05rem;max-width:480px;margin-inline:auto;margin-bottom:2rem;">
+            Availability is limited. Reach out today to check open spots and schedule your family's visit.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <a href="tel:7815025875" class="btn" style="background:#fff;color:var(--pink);">
+              📞 Call (781) 502-5875
+            </a>
+            <a href="index.html#contact" class="btn btn-secondary">
+              ✉️ Send a Message
+            </a>
+          </div>
         </div>
 
-        <details>
-            <summary>Things to Bring on Your Child’s First Day</summary>
-            <div class="optional-content">
-                <div class="optional-text">
-                    <ul>
-                        <li>Comfortable clothing + one extra set</li>
-                        <li>Favorite blanket or comfort item (optional)</li>
-                        <li>Lunch and snacks (if applicable)</li>
-                        <li>Any remaining forms or documents provided in person</li>
-                    </ul>
-                </div>
+      </div><!-- /.container -->
+    </div>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/LOGO.jpg" alt="Berline Family Daycare logo" width="42" height="42" loading="lazy">
+            <div class="footer-logo-text">
+              <div class="logo-name">🌸 Berline Family Daycare</div>
+              <div class="logo-sub">Licensed Childcare &amp; Early Learning</div>
             </div>
-        </details>
-    </section>
-</main>
+          </div>
+          <p class="footer-desc">A warm, safe, and nurturing environment for children ages 6 weeks through 5 years in Fitchburg, MA.</p>
+        </div>
 
-<!-- Card-swap animation (images-only) -->
-<!-- card-swap animation removed -->
+        <nav aria-label="Footer navigation">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#programs">Programs</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="enrollment.html" aria-current="page">Enrollment</a></li>
+          </ul>
+        </nav>
 
-<footer id="contact">
-    <h2>Contact Us</h2>
-    <p>📍 15 Railroad Street, Fitchburg MA 01420, USA</p>
-    <p>📞 (781) 502-5558</p>
-    <p>✉️ bsouil@yahoo.com</p>
-</footer>
+        <div>
+          <h4>Contact Us</h4>
+          <!-- IMPROVEMENT: Phone number corrected and consistent across all pages -->
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">📞 <a href="tel:7815025875">(781) 502-5875</a></div>
+            <div class="footer-contact-item">✉️ <a href="mailto:bsouil@yahoo.com">bsouil@yahoo.com</a></div>
+            <div class="footer-contact-item">📍 15 Railroad St, Fitchburg, MA</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Berline Family Daycare. All rights reserved.</p>
+        <a href="https://www.mass.gov/orgs/department-of-early-education-and-care" target="_blank" rel="noopener">MA EEC Licensed Provider</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="index.html#contact" class="float-cta" aria-label="Book a tour">
+    📅 <span>Book a Tour</span>
+  </a>
+
+  <script>
+  const menuBtn   = document.getElementById('mobileMenuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+
+  menuBtn.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    mobileNav.setAttribute('aria-hidden',  String(!open));
+  });
+
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      mobileNav.setAttribute('aria-hidden', 'true');
+    });
+  });
+  </script>
 
 </body>
 </html>
