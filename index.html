@@ -3,26 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Berline Family Daycare — Licensed, nurturing childcare in Fitchburg, MA for infants through preschool. Schedule a tour today.">
 
-  <!-- IMPROVEMENT: Removed Tailwind CDN (~300kb). One lean stylesheet only. -->
-  <link rel="stylesheet" href="style.css">
+  <!-- ── SEO / Meta ──────────────────────────────────────── -->
+  <title>Berline Family Daycare | Licensed Childcare in Fitchburg, MA</title>
+  <meta name="description" content="Safe, structured childcare that builds confident, school-ready kids. Licensed by MA EEC. Serving infants through preschool in Fitchburg, MA. Schedule a free tour today.">
+  <meta name="keywords" content="daycare Fitchburg MA, licensed childcare Massachusetts, infant care, toddler program, preschool prep, family daycare">
 
-  <!-- Preconnect for Google Fonts (faster load) -->
+  <!-- ── Open Graph ──────────────────────────────────────── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://berlinefamilydaycare.com/">
+  <meta property="og:title"       content="Berline Family Daycare | Licensed Childcare in Fitchburg, MA">
+  <meta property="og:description" content="Safe, structured childcare that builds confident, school-ready kids. Licensed by MA EEC. Serving infants through preschool in Fitchburg, MA.">
+  <meta property="og:image"       content="images/logo.jpg">
+  <meta property="og:locale"      content="en_US">
+  <meta property="og:site_name"   content="Berline Family Daycare">
+
+  <!-- ── Twitter Card ───────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Berline Family Daycare | Licensed Childcare in Fitchburg, MA">
+  <meta name="twitter:description" content="Safe, structured childcare that builds confident, school-ready kids. Licensed by MA EEC.">
+  <meta name="twitter:image"       content="images/LOGO.jpg">
+
+  <!-- ── Canonical ─────────────────────────────────────── -->
+  <link rel="canonical" href="https://berlinefamilydaycare.com/">
+
+  <!-- ── Fonts ─────────────────────────────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <title>Berline Family Daycare | Licensed Childcare in Fitchburg, MA</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- IMPROVEMENT: Skip link for keyboard/screen reader navigation (WCAG 2.4.1) -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!-- ═══════════════════════════════════════════════════════
-       HEADER — FIXED: mobile button was class="hidden" in
-       original and never appeared. Now fully functional.
+       HEADER
   ═══════════════════════════════════════════════════════ -->
   <header class="site-header" role="banner">
     <div class="container">
@@ -32,21 +48,19 @@
           <img src="images/logo.jpg" alt="" width="44" height="44" aria-hidden="true">
           <div class="logo-text">
             <span class="logo-name">🌸 Berline Family Daycare</span>
-            <span class="logo-sub"></span>
+            <span class="logo-sub">Licensed Childcare &amp; Early Learning</span>
           </div>
         </a>
 
-        <!-- Desktop nav -->
         <nav class="desktop-nav" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#programs">Programs</a>
-          <a href="#trust">Safety & Trust</a>
+          <a href="#schedule">Daily Schedule</a>
           <a href="gallery.html">Gallery</a>
-          <a href="#contact">Contact</a>
+          <a href="enrollment.html">Enrollment</a>
           <a href="#contact" class="nav-cta">Book a Tour</a>
         </nav>
 
-        <!-- FIXED: button no longer has class="hidden" -->
         <button
           class="mobile-menu-btn"
           id="mobileMenuBtn"
@@ -54,7 +68,6 @@
           aria-controls="mobileNav"
           aria-label="Toggle navigation menu"
         >
-          <!-- Hamburger icon -->
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <line x1="3" y1="6"  x2="21" y2="6"/>
             <line x1="3" y1="12" x2="21" y2="12"/>
@@ -62,29 +75,27 @@
           </svg>
         </button>
 
-      </div><!-- /.header-inner -->
-    </div><!-- /.container -->
+      </div>
+    </div>
 
-    <!-- Mobile nav drawer -->
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
       <a href="#about">About Us</a>
       <a href="#programs">Programs</a>
-      <a href="#trust">Safety & Trust</a>
+      <a href="#schedule">Daily Schedule</a>
       <a href="gallery.html">Gallery</a>
+      <a href="enrollment.html">Enrollment</a>
       <a href="#contact">Contact</a>
       <a href="#contact" class="mobile-cta">📅 Book a Tour</a>
     </nav>
   </header>
 
   <!-- ═══════════════════════════════════════════════════════
-       MAIN CONTENT
+       MAIN
   ═══════════════════════════════════════════════════════ -->
   <main id="main-content">
 
     <!-- ── HERO ─────────────────────────────────────────── -->
-    <!-- IMPROVEMENT: Added dark overlay so text is readable over background photo.
-         Added hero badges (trust signals) and eyebrow label.
-         Hero canvas kept for desktop, hidden on mobile for performance. -->
+    <!-- UPDATED: New high-conversion headline + supporting bullet points -->
     <section id="hero" class="hero" aria-label="Welcome">
       <canvas id="hero-canvas" aria-hidden="true"></canvas>
 
@@ -92,30 +103,26 @@
         <div class="hero-eyebrow">🏠 Licensed by MA EEC · Fitchburg, MA</div>
 
         <h1>
-          A Safe, Warm Place<br>
-          <span>Your Child Will Love</span>
+          Safe, Structured Childcare That Builds<br>
+          <span>Confident, School-Ready Kids</span>
         </h1>
 
-        <p class="hero-sub">
-          Trusted childcare for infants through preschool. We partner with families to give every child the nurturing start they deserve.
-        </p>
-
-        <div class="hero-badges" role="list" aria-label="Key highlights">
-          <span class="hero-badge" role="listitem">✓ State Licensed</span>
-          <span class="hero-badge" role="listitem">✓ CPR Certified Staff</span>
-          <span class="hero-badge" role="listitem">✓ Ages 6 Weeks – 5 Years</span>
-          <span class="hero-badge" role="listitem">✓ Daily Parent Updates</span>
-        </div>
+        <ul class="hero-bullets" role="list" aria-label="Key reasons to choose us">
+          <li role="listitem">✓ Licensed &amp; certified caregivers</li>
+          <li role="listitem">✓ Structured daily learning program</li>
+          <li role="listitem">✓ Limited spots — enroll early</li>
+        </ul>
 
         <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary">📅 Book a Free Tour</a>
-          <a href="enrollment.html" class="btn btn-secondary">View Enrollment Info</a>
+          <a href="#contact" class="btn btn-primary btn-hero-cta">📅 Schedule a Tour Today</a>
+          <a href="tel:7815025875"  class="btn btn-secondary">📞 (781) 502-5875</a>
         </div>
+
+        <p class="hero-note">Free tours available · No obligation · Spots fill quickly</p>
       </div>
     </section>
 
     <!-- ── TRUST BAR ─────────────────────────────────────── -->
-    <!-- IMPROVEMENT: Quick trust signals right below hero — proven conversion boost -->
     <div class="trust-bar" role="region" aria-label="Key credentials">
       <div class="container">
         <div class="trust-bar-inner">
@@ -132,19 +139,18 @@
             Background-Checked Staff
           </div>
           <div class="trust-item">
-            <span class="trust-icon" aria-hidden="true">📱</span>
-            Daily Family Updates
+            <span class="trust-icon" aria-hidden="true">👥</span>
+            Small Group Sizes
           </div>
           <div class="trust-item">
-            <span class="trust-icon" aria-hidden="true">🌿</span>
-            Clean &amp; Safe Environment
+            <span class="trust-icon" aria-hidden="true">📱</span>
+            Daily Family Updates
           </div>
         </div>
       </div>
     </div>
 
     <!-- ── ABOUT ─────────────────────────────────────────── -->
-    <!-- IMPROVEMENT: Added missing About section that nav pointed to -->
     <section id="about" class="section" aria-labelledby="about-heading">
       <div class="container">
         <div class="about-grid">
@@ -157,7 +163,7 @@
               height="420"
               loading="lazy"
             >
-            <div class="about-badge" aria-label="Years of trusted childcare">
+            <div class="about-badge" aria-label="Safety is our top priority">
               <span class="badge-num">#1</span>
               <span class="badge-text">Safety Priority</span>
             </div>
@@ -190,7 +196,6 @@
     </section>
 
     <!-- ── PROGRAMS ──────────────────────────────────────── -->
-    <!-- IMPROVEMENT: Added age ranges, feature lists, and CTA per card -->
     <section id="programs" class="section section-alt" aria-labelledby="programs-heading">
       <div class="container">
         <div class="section-header">
@@ -201,14 +206,13 @@
 
         <div class="programs-grid">
 
-          <!-- Infant -->
           <article class="program-card">
             <div class="program-icon" aria-hidden="true">👶</div>
             <h3>Infant Care</h3>
             <span class="program-age">6 weeks – 18 months</span>
             <p>One-on-one nurturing care during your baby's most important developmental window. We follow your home schedule so transitions are smooth.</p>
             <ul class="program-features" aria-label="Program features">
-              <li>Individualized feeding & sleep schedules</li>
+              <li>Individualized feeding &amp; sleep schedules</li>
               <li>Sensory play and tummy time</li>
               <li>Daily parent photo updates</li>
               <li>Low caregiver-to-infant ratio</li>
@@ -216,7 +220,6 @@
             <a href="#contact" class="btn btn-outline btn-sm">Ask About Infant Care</a>
           </article>
 
-          <!-- Toddler -->
           <article class="program-card">
             <div class="program-icon" aria-hidden="true">🧒</div>
             <h3>Toddler Program</h3>
@@ -231,7 +234,6 @@
             <a href="#contact" class="btn btn-outline btn-sm">Ask About Toddler Program</a>
           </article>
 
-          <!-- Preschool -->
           <article class="program-card">
             <div class="program-icon" aria-hidden="true">📚</div>
             <h3>Preschool Prep</h3>
@@ -246,7 +248,7 @@
             <a href="#contact" class="btn btn-outline btn-sm">Ask About Preschool Prep</a>
           </article>
 
-        </div><!-- /.programs-grid -->
+        </div>
 
         <p class="text-center mt-2">
           Not sure which program is right? <a href="#contact" style="color:var(--pink);font-weight:700;">Contact us</a> — we're happy to talk through options with you.
@@ -254,8 +256,84 @@
       </div>
     </section>
 
+    <!-- ── DAILY SCHEDULE ────────────────────────────────── -->
+    <!-- NEW SECTION: High-trust daily schedule timeline -->
+    <section id="schedule" class="section" aria-labelledby="schedule-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">A Typical Day</span>
+          <h2 id="schedule-heading">Structured, Predictable &amp; Full of Learning</h2>
+          <p>Consistent routines build confidence. Here's what your child's day looks like with us.</p>
+        </div>
+
+        <div class="schedule-grid" role="list" aria-label="Daily schedule">
+
+          <div class="schedule-card" role="listitem">
+            <div class="schedule-emoji" aria-hidden="true">🌅</div>
+            <div class="schedule-time">7:30 – 9:00 AM</div>
+            <h3>Morning Arrival</h3>
+            <p>Warm greetings, soft music, and free exploration with puzzles and books while everyone settles in.</p>
+          </div>
+
+          <div class="schedule-card" role="listitem">
+            <div class="schedule-emoji" aria-hidden="true">🎨</div>
+            <div class="schedule-time">9:00 – 11:00 AM</div>
+            <h3>Learning Activities</h3>
+            <p>Guided lessons, arts &amp; crafts, storytime, music, and age-appropriate games that build early skills.</p>
+          </div>
+
+          <div class="schedule-card" role="listitem">
+            <div class="schedule-emoji" aria-hidden="true">🍎</div>
+            <div class="schedule-time">11:00 – 11:45 AM</div>
+            <h3>Snack &amp; Circle Time</h3>
+            <p>Nutritious morning snack followed by group conversation, sharing, and social skill building.</p>
+          </div>
+
+          <div class="schedule-card" role="listitem">
+            <div class="schedule-emoji" aria-hidden="true">🌿</div>
+            <div class="schedule-time">11:45 AM – 12:30 PM</div>
+            <h3>Outdoor Play</h3>
+            <p>Fresh air, supervised physical activity, and exploration in our safe enclosed outdoor space every day.</p>
+          </div>
+
+          <div class="schedule-card" role="listitem">
+            <div class="schedule-emoji" aria-hidden="true">🍽️</div>
+            <div class="schedule-time">12:30 – 1:15 PM</div>
+            <h3>Lunch</h3>
+            <p>Family-style lunch in a calm, social setting. Children bring lunch from home or per individual arrangement.</p>
+          </div>
+
+          <div class="schedule-card" role="listitem">
+            <div class="schedule-emoji" aria-hidden="true">😴</div>
+            <div class="schedule-time">1:15 – 3:00 PM</div>
+            <h3>Nap &amp; Quiet Rest</h3>
+            <p>Rest time for infants and toddlers; quiet independent activities for older children who no longer nap.</p>
+          </div>
+
+          <div class="schedule-card" role="listitem">
+            <div class="schedule-emoji" aria-hidden="true">🧩</div>
+            <div class="schedule-time">3:00 – 4:30 PM</div>
+            <h3>Afternoon Activities</h3>
+            <p>Afternoon snack, sensory play, creative projects, and child-led free play with peers.</p>
+          </div>
+
+          <div class="schedule-card" role="listitem">
+            <div class="schedule-emoji" aria-hidden="true">👋</div>
+            <div class="schedule-time">4:30 – 5:30 PM</div>
+            <h3>Pickup &amp; Daily Recap</h3>
+            <p>Each parent receives a personal update on their child's day — activities, meals, mood, and milestones.</p>
+          </div>
+
+        </div>
+
+        <div class="schedule-note" role="note">
+          <strong>Note:</strong> Schedules are adapted by age group. Infants follow individualized routines. Contact us to discuss your child's specific needs.
+        </div>
+      </div>
+    </section>
+
     <!-- ── TRUST & TRANSPARENCY ──────────────────────────── -->
-    <section id="trust" class="section" aria-labelledby="trust-heading">
+    <section id="trust" class="section section-alt" aria-labelledby="trust-heading">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">Peace of Mind</span>
@@ -308,7 +386,6 @@
             </ul>
           </div>
 
-          <!-- Tour CTA card — highlighted, full-width on large screens -->
           <div class="trust-card trust-card-tour">
             <div class="trust-card-icon" aria-hidden="true">🏠</div>
             <h3>Tours &amp; References Always Available</h3>
@@ -321,12 +398,12 @@
             <a href="#contact" class="btn btn-primary" style="background:#fff;color:var(--pink);margin-top:1rem;">Book a Free Tour Today</a>
           </div>
 
-        </div><!-- /.trust-grid -->
+        </div>
       </div>
     </section>
-    
+
     <!-- ── GALLERY PREVIEW ───────────────────────────────── -->
-    <section id="gallery" class="section section-alt" aria-labelledby="gallery-heading">
+    <section id="gallery" class="section" aria-labelledby="gallery-heading">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">Our Space</span>
@@ -334,11 +411,10 @@
           <p>Every corner of our daycare is designed with children's safety, comfort, and curiosity in mind.</p>
         </div>
 
-        <!-- IMPROVEMENT: Added lazy loading on all gallery images -->
         <div class="gallery-preview-grid" role="list" aria-label="Photos of our daycare">
           <img src="images/playroom.jpg" alt="Bright, organized playroom with age-appropriate toys"  width="400" height="200" loading="lazy" role="listitem">
           <img src="images/learning.jpg" alt="Children engaged in a guided learning activity"         width="400" height="200" loading="lazy" role="listitem">
-          <img src="images/outdoor.jpg"  alt="Safe, enclosed outdoor play area with equipment"       width="400" height="200" loading="lazy" role="listitem">
+          <img src="images/outdoor.jpg"  alt="Safe, enclosed outdoor play area with equipment"        width="400" height="200" loading="lazy" role="listitem">
         </div>
 
         <p class="text-center mt-2">
@@ -347,9 +423,78 @@
       </div>
     </section>
 
-    <!-- ── FAQ ──────────────────────────────────────────── -->
-    <!-- IMPROVEMENT: Added FAQ accordion — parents have questions, give them answers -->
-    <section id="faq" class="section" aria-labelledby="faq-heading">
+    <!-- ── TESTIMONIALS ──────────────────────────────────── -->
+    <!-- NEW SECTION: Social proof / parent reviews -->
+    <!-- <section id="testimonials" class="section section-pink" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Parent Reviews</span>
+          <h2 id="testimonials-heading">What Families Are Saying</h2>
+          <p>We're proud to be trusted by families across Fitchburg and surrounding communities.</p>
+        </div>
+
+        <div class="testimonials-grid" role="list" aria-label="Parent testimonials">
+
+          <div class="testimonial-card" role="listitem">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+            </div>
+            <p>"Dropping off my daughter used to fill me with anxiety — until we found Berline Family Daycare. She runs in every morning now, happy and excited. The daily updates give me total peace of mind while I'm at work."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">👩</div>
+              <div>
+                <div class="author-name">Maria T.</div>
+                <div class="author-detail">Mother of a 2-year-old, Fitchburg</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" role="listitem">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+            </div>
+            <p>"Our son started as an infant and is now in the preschool prep program. The structured routine and the genuine care from every caregiver made all the difference. He's confident, social, and completely ready for kindergarten."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">👨</div>
+              <div>
+                <div class="author-name">James &amp; Lisa R.</div>
+                <div class="author-detail">Parents of a 4-year-old, Leominster</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" role="listitem">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+            </div>
+            <p>"What stood out immediately was how clean and organized everything was. The staff clearly love what they do. My twins are thriving — and knowing they're in a safe, stimulating environment makes our whole family less stressed."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">👩</div>
+              <div>
+                <div class="author-name">Danielle M.</div>
+                <div class="author-detail">Mother of twins (age 3), Fitchburg</div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.testimonials-grid
+      </div>
+    </section> -->
+
+    <!-- ── FAQ ───────────────────────────────────────────── -->
+    <section id="faq" class="section section-alt" aria-labelledby="faq-heading">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">Common Questions</span>
@@ -419,12 +564,29 @@
             </div>
           </div>
 
-        </div><!-- /.faq-list -->
+        </div>
 
         <p class="text-center mt-2" style="color:var(--slate-500);font-size:.95rem;">
           Have a question we didn't answer?
           <a href="#contact" style="color:var(--pink);font-weight:700;">Ask us directly →</a>
         </p>
+      </div>
+    </section>
+
+    <!-- ── FINAL CTA ──────────────────────────────────────── -->
+    <!-- NEW SECTION: High-conversion closing CTA before contact form -->
+    <section class="final-cta-section" aria-label="Schedule a tour call to action">
+      <div class="container">
+        <div class="final-cta-inner">
+          <div class="final-cta-badge" aria-hidden="true">⚡ Limited Spots Available</div>
+          <h2>Book a Tour Today —<br>Your Child Deserves the Best Start</h2>
+          <p>Tours are free, friendly, and no-obligation. Come see our space, meet the staff, and ask anything on your mind.</p>
+          <div class="final-cta-actions">
+            <a href="#contact"       class="btn final-cta-btn-primary">📅 Schedule a Free Tour</a>
+            <a href="tel:7815025875" class="btn final-cta-btn-secondary">📞 Call (781) 502-5875</a>
+          </div>
+          <p class="final-cta-footnote">Monday – Friday · Fitchburg, MA · MA EEC Licensed</p>
+        </div>
       </div>
     </section>
 
@@ -439,7 +601,6 @@
 
         <div class="contact-grid">
 
-          <!-- Contact Info -->
           <div class="contact-info">
             <h3>We'd Love to Hear From You</h3>
             <p>Whether you have a quick question or are ready to schedule a visit, reach out using any of these methods.</p>
@@ -469,7 +630,6 @@
             </div>
 
             <div class="map-wrap">
-              <!-- IMPROVEMENT: lazy loading on iframe -->
               <iframe
                 title="Berline Family Daycare location map"
                 src="https://www.google.com/maps?q=15+Railroad+St,+Fitchburg,+MA+01420&output=embed"
@@ -477,11 +637,8 @@
                 loading="lazy"
               ></iframe>
             </div>
-          </div><!-- /.contact-info -->
+          </div>
 
-          <!-- Contact Form -->
-          <!-- IMPROVEMENT: Proper labels, inline success/error (no alert()),
-               "reason for contact" dropdown to route tour vs enrollment vs general -->
           <div class="contact-form-card">
             <h3>Send Us a Message</h3>
             <p class="form-sub">Fill out the form and we'll get back to you within one business day.</p>
@@ -519,7 +676,6 @@
                 <span id="submitText">Send Message</span>
               </button>
 
-              <!-- IMPROVEMENT: Inline feedback instead of alert() -->
               <div id="formSuccess" class="form-success" role="alert" aria-live="polite">
                 🎉 Thank you! Your message has been sent. We'll be in touch within one business day.
               </div>
@@ -528,13 +684,13 @@
               </div>
 
             </form>
-          </div><!-- /.contact-form-card -->
+          </div>
 
-        </div><!-- /.contact-grid -->
+        </div>
       </div>
     </section>
 
-  </main><!-- /#main-content -->
+  </main>
 
   <!-- ═══════════════════════════════════════════════════════
        FOOTER
@@ -545,7 +701,7 @@
 
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="images/logo.jpg" alt="Berline Family Daycare logo" width="42" height="42" loading="lazy">
+            <img src="images/LOGO.jpg" alt="Berline Family Daycare logo" width="42" height="42" loading="lazy">
             <div class="footer-logo-text">
               <div class="logo-name">🌸 Berline Family Daycare</div>
               <div class="logo-sub">Licensed Childcare &amp; Early Learning</div>
@@ -560,7 +716,7 @@
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#programs">Programs</a></li>
-            <li><a href="#trust">Safety &amp; Trust</a></li>
+            <li><a href="#schedule">Daily Schedule</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="enrollment.html">Enrollment</a></li>
           </ul>
@@ -575,7 +731,7 @@
           </div>
         </div>
 
-      </div><!-- /.footer-grid -->
+      </div>
 
       <div class="footer-bottom">
         <p>&copy; 2025 Berline Family Daycare. All rights reserved.</p>
@@ -584,9 +740,6 @@
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════════════════════
-       FLOATING BOOK A TOUR CTA — persistent conversion driver
-  ═══════════════════════════════════════════════════════ -->
   <a href="#contact" class="float-cta" aria-label="Book a tour">
     📅 <span>Book a Tour</span>
   </a>
@@ -595,7 +748,7 @@
        SCRIPTS
   ═══════════════════════════════════════════════════════ -->
   <script>
-  // ── Mobile nav toggle ──────────────────────────────────
+  // ── Mobile nav ─────────────────────────────────────────
   const menuBtn   = document.getElementById('mobileMenuBtn');
   const mobileNav = document.getElementById('mobileNav');
 
@@ -605,7 +758,6 @@
     mobileNav.setAttribute('aria-hidden',  String(!open));
   });
 
-  // Close mobile nav when a link is clicked
   mobileNav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       mobileNav.classList.remove('open');
@@ -621,7 +773,6 @@
       const answer = item.querySelector('.faq-answer');
       const isOpen = item.classList.contains('open');
 
-      // Close all others
       document.querySelectorAll('.faq-item.open').forEach(open => {
         if (open !== item) {
           open.classList.remove('open');
@@ -636,15 +787,14 @@
     });
   });
 
-  // ── Contact form — IMPROVEMENT: no alert(), inline feedback ──
-  const form        = document.getElementById('contactForm');
-  const submitText  = document.getElementById('submitText');
-  const successMsg  = document.getElementById('formSuccess');
-  const errorMsg    = document.getElementById('formError');
+  // ── Contact form ───────────────────────────────────────
+  const form       = document.getElementById('contactForm');
+  const submitText = document.getElementById('submitText');
+  const successMsg = document.getElementById('formSuccess');
+  const errorMsg   = document.getElementById('formError');
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-
     submitText.textContent = 'Sending…';
     successMsg.classList.remove('show');
     errorMsg.classList.remove('show');
@@ -655,7 +805,6 @@
         body: new FormData(form),
         headers: { 'Accept': 'application/json' }
       });
-
       if (response.ok) {
         successMsg.classList.add('show');
         form.reset();
@@ -683,32 +832,29 @@
   }
   </script>
 
-  <!-- Hero canvas animation (module) — unchanged, gracefully absent on mobile -->
+  <!-- Hero canvas animation — unchanged, gracefully absent on mobile -->
   <script type="module">
     import { createSimpleHero } from './hero-ballpit.mjs';
     const canvas = document.getElementById('hero-canvas');
     if (!canvas) return;
 
     const SMALL = '(max-width:767px)';
-    const mq = window.matchMedia(SMALL);
+    const mq    = window.matchMedia(SMALL);
     let instance = null;
 
     function start() {
       if (instance) return;
       const dpr   = Math.max(1, Math.min(window.devicePixelRatio || 1, 2));
-      const count = Math.max(30, Math.round(80 / dpr));
-      canvas.style.display = 'block';
-      instance = createSimpleHero(canvas, { count });
+      const count = Math.max(30, Math.round(window.innerWidth / 24));
+      instance = createSimpleHero(canvas, { dpr, count });
     }
 
     function stop() {
-      instance?.dispose?.();
-      instance = null;
-      canvas.style.display = 'none';
+      if (instance) { instance.destroy(); instance = null; }
     }
 
-    mq.matches ? stop() : start();
-    mq.addEventListener?.('change', e => e.matches ? stop() : start());
+    if (!mq.matches) start();
+    mq.addEventListener('change', e => e.matches ? stop() : start());
   </script>
 
 </body>
